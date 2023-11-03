@@ -14,7 +14,7 @@ build:
     - POETRY_DYNAMIC_VERSIONING_BYPASS={{ version }}
   script:
     - {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - jobard-daemon = jobard_daemon.console.application:cli
@@ -57,3 +57,4 @@ about:
 extra:
   recipe-maintainers:
     - marie59
+    - criou-cg
