@@ -1,5 +1,5 @@
 {% set name = "jobard-daemon" %}
-{% set version = "1.4.3" %}
+{% set version = "1.4.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://gitlab.ifremer.fr/jobard/jobard_daemon/-/archive/{{ version }}/jobard_daemon-{{ version }}.tar.gz
-  sha256: 357e19b75ee5f421ad7231ed0914d141a34762a38d2ea86ff84e6bb940ad7382
+  sha256: cec0ecbcfbc2dc4c704d2ddf16b099d48bff0f1e580502e942db4a0cc2734d65
 
 build:
   script_env:
     - POETRY_DYNAMIC_VERSIONING_BYPASS={{ version }}
   script:
     - {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
   noarch: python
   entry_points:
     - jobard-daemon = jobard_daemon.console.application:cli
