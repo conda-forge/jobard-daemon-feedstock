@@ -1,5 +1,6 @@
 {% set name = "jobard-daemon" %}
 {% set version = "1.4.10" %}
+{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
@@ -21,13 +22,13 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python >={{ python_min }}
     - pip
     - poetry-core
     - poetry-dynamic-versioning
 
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - pydantic >=1.8.2,<1.9
     - click >=8.0.2,<8.0.3
     - jinja2 >2
