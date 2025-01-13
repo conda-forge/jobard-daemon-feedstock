@@ -1,5 +1,6 @@
 {% set name = "jobard-daemon" %}
-{% set version = "1.4.7" %}
+{% set version = "1.4.10" %}
+{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://gitlab.ifremer.fr/jobard/jobard_daemon/-/archive/{{ version }}/jobard_daemon-{{ version }}.tar.gz
-  sha256: 4e5e3aecad0d11ae90e54e045425ce4ee3ba4a636be157d88bbe2e57a676ef60
+  sha256: 53add24cb2444fbd69b1e17d9e3c49ea0aaa74f3fa7d74068f329ddd847d54ea
 
 build:
   script_env:
@@ -21,13 +22,13 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python >={{ python_min }}
     - pip
     - poetry-core
     - poetry-dynamic-versioning
 
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - pydantic >=1.8.2,<1.9
     - click >=8.0.2,<8.0.3
     - jinja2 >2
