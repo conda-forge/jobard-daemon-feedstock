@@ -1,5 +1,5 @@
 {% set name = "jobard-daemon" %}
-{% set version = "1.7.0" %}
+{% set version = "1.7.1" %}
 {% set python_min = "3.9" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://gitlab.ifremer.fr/jobard/jobard_daemon/-/archive/{{ version }}/jobard_daemon-{{ version }}.tar.gz
-  sha256: bda6678f9d7c26557176e0f39abb12a4b53c2381d7f8037cfa9f88c511694928
+  sha256: 94a8313a41b90a78df565641826f4d80d4d5f2acf64c25614f344d3e17aad76c
 
 build:
   script_env:
